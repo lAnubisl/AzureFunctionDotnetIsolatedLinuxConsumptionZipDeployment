@@ -42,7 +42,6 @@ resource "azurerm_linux_function_app" "func" {
   storage_account_name       = azurerm_storage_account.st_func.name
   storage_account_access_key = azurerm_storage_account.st_func.primary_access_key
   app_settings = {
-    AzureWebJobsFeatureFlags       = "EnableWorkerIndexing"
     FUNCTIONS_WORKER_RUNTIME       = "dotnet-isolated"
     SCM_DO_BUILD_DURING_DEPLOYMENT = "false"
   }
